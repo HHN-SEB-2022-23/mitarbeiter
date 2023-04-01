@@ -26,10 +26,6 @@ public abstract class Mitarbeiter {
 
     @Override
     public String toString() {
-        return "Mitarbeiter{" +
-            "vorname='" + vorname + '\'' +
-            ", nachname='" + nachname + '\'' +
-            ", jahresGehaltBisHeute=" + jahresGehaltBisHeute +
-            '}';
+        return String.format("%s %s", vorname, nachname);
     }
 }
