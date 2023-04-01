@@ -29,5 +29,6 @@ public class Zeitarbeiter extends Mitarbeiter {
 
     public void setGearbeiteteStunden(int x) {
         gearbeiteteStunden = x;
+
     }
 }
