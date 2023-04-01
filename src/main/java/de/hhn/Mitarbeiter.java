@@ -8,15 +8,15 @@ public abstract class Mitarbeiter {
     public Mitarbeiter() { }
 
     public String getVorname() {
-        return this.vorname;
+        return vorname;
     }
 
     public String getNachname() {
-        return this.nachname;
+        return nachname;
     }
 
     public float getJahresGehaltBisHeute() {
-        return this.jahresGehaltBisHeute;
+        return jahresGehaltBisHeute;
     }
 
     public abstract float entgeltBerechnen();
@@ -24,9 +24,9 @@ public abstract class Mitarbeiter {
     @Override
     public String toString() {
         return "Mitarbeiter{" +
-            "vorname='" + this.vorname + '\'' +
-            ", nachname='" + this.nachname + '\'' +
-            ", jahresGehaltBisHeute=" + this.jahresGehaltBisHeute +
+            "vorname='" + vorname + '\'' +
+            ", nachname='" + nachname + '\'' +
+            ", jahresGehaltBisHeute=" + jahresGehaltBisHeute +
             '}';
     }
 }
