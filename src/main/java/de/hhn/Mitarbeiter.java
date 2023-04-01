@@ -3,7 +3,7 @@ package de.hhn;
 public abstract class Mitarbeiter {
     private String vorname = "";
     private String nachname = "";
-    private float jahresGehaltBisHeute = 0;
+    private float jahresGehaltBisHeute = 0f;
 
     public Mitarbeiter() { }
 
