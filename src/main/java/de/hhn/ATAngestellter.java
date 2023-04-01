@@ -7,6 +7,10 @@ public class ATAngestellter extends Mitarbeiter {
 
     private float monatsLohn;
 
+    public ATAngestellter(){
+
+    }
+
 
     public float getMonatsLohn(){
         return monatsLohn;
