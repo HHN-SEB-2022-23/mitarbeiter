@@ -19,6 +19,7 @@ public class ATAngestellter extends Mitarbeiter {
     @Override
 
     public float entgeltBerechnen(){
-            return monatsLohn;
+        jahresGehaltBisHeute += monatsLohn;
+        return monatsLohn;
     }
 }
