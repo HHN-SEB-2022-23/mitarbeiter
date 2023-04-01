@@ -27,7 +27,7 @@ public class Zeitarbeiter extends Mitarbeiter {
         return gearbeiteteStunden;
     }
 
-    public void setGearbeiteteStunden(int gearbeiteteStunden) {
-        this.gearbeiteteStunden = gearbeiteteStunden;
+    public void setGearbeiteteStunden(int x) {
+        gearbeiteteStunden = x;
     }
 }
