@@ -1,11 +1,17 @@
 package de.hhn;
 
+/**
+ * @author Frank Mayer
+ */
 public abstract class Mitarbeiter {
     private String vorname = "";
     private String nachname = "";
     private float jahresGehaltBisHeute = 0f;
 
-    public Mitarbeiter() { }
+    public Mitarbeiter(String vorname, String nachname) {
+        this.vorname = vorname;
+        this.nachname = nachname;
+    }
 
     public String getVorname() {
         return vorname;
@@ -23,10 +29,6 @@ public abstract class Mitarbeiter {
 
     @Override
     public String toString() {
-        return "Mitarbeiter{" +
-            "vorname='" + vorname + '\'' +
-            ", nachname='" + nachname + '\'' +
-            ", jahresGehaltBisHeute=" + jahresGehaltBisHeute +
-            '}';
+        return String.format("%s %s", vorname, nachname);
     }
 }

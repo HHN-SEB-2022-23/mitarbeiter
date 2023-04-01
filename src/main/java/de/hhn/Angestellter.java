@@ -3,7 +3,6 @@ package de.hhn;
 /**
  * @author René Ott
  */
-
 public class Angestellter extends Mitarbeiter{
 
     private float monatsLohn;
