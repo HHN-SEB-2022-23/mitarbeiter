@@ -21,7 +21,8 @@ public abstract class Mitarbeiter {
 
     public abstract float entgeldBerechnen();
 
-    @Override public String toString() {
+    @Override
+    public String toString() {
         return "Mitarbeiter{" +
             "vorname='" + this.vorname + '\'' +
             ", nachname='" + this.nachname + '\'' +
