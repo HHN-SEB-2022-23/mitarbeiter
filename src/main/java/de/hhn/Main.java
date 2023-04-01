@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         var mitarbeiter = Arrays.asList(
-                new Angestellter("Rene", "Ott"),
-                new ATAngestellter("Jan", "Jäger"),
-                new Zeitarbeiter("Felix", "Marzioch")
+                new Angestellter("Rene", "Ott", 20000, 20, 4),
+                new ATAngestellter("Jan", "Jäger", 20200),
+                new Zeitarbeiter("Felix", "Marzioch", 25, 400)
         );
 
         for (var m : mitarbeiter) {
