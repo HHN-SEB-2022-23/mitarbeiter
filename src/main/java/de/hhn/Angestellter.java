@@ -33,8 +33,9 @@ public class Angestellter extends Mitarbeiter{
     }
 
     @Override
-    public float entgeltBerechnen(float monatsLohn, int gearbeiteteUeberstunden, float ueberStundenTarif){
+    public float entgeltBerechnen() {
         float entgelt = monatsLohn + (gearbeiteteUeberstunden * ueberStundenTarif);
+        jahresGehaltBisHeute += entgelt;
         return entgelt;
     }
 }

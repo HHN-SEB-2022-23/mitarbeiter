@@ -21,6 +21,7 @@ public class Zeitarbeiter extends Mitarbeiter {
     @Override
     public float entgeltBerechnen() {
             float entgelt = gearbeiteteStunden * stundenLohn;
+            jahresGehaltBisHeute += entgelt;
             return entgelt;
     }
 
