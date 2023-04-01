@@ -4,9 +4,9 @@ package de.hhn;
  * @author Frank Mayer
  */
 public abstract class Mitarbeiter {
-    private String vorname = "";
-    private String nachname = "";
-    private float jahresGehaltBisHeute = 0f;
+    protected String vorname = "";
+    protected String nachname = "";
+    protected float jahresGehaltBisHeute = 0f;
 
     public Mitarbeiter(String vorname, String nachname) {
         this.vorname = vorname;
