@@ -10,7 +10,7 @@ public class Angestellter extends Mitarbeiter{
     private float ueberStundenTarif;
     private int gearbeiteteUeberstunden;
 
-    public Angestellter(){
+    public Angestellter(float monatsLohn, float ueberStundenTarif, int gearbeiteteUeberstunden){
 
     }
 
