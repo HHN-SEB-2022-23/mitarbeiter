@@ -4,8 +4,8 @@ package de.hhn;
  * @author Frank Mayer
  */
 public abstract class Mitarbeiter {
-    protected String vorname = "";
-    protected String nachname = "";
+    protected String vorname;
+    protected String nachname;
     protected float jahresGehaltBisHeute = 0f;
 
     public Mitarbeiter(String vorname, String nachname) {
