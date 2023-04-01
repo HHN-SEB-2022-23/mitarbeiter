@@ -9,8 +9,11 @@ public class Angestellter extends Mitarbeiter{
     private float ueberStundenTarif;
     private int gearbeiteteUeberstunden;
 
-    public Angestellter(float monatsLohn, float ueberStundenTarif, int gearbeiteteUeberstunden){
-
+    public Angestellter(String vorname, String nachname, float monatsLohn, float ueberStundenTarif, int gearbeiteteUeberstunden){
+        super(vorname, nachname);
+        this.monatsLohn = monatsLohn;
+        this.ueberStundenTarif = ueberStundenTarif;
+        this.gearbeiteteUeberstunden = gearbeiteteUeberstunden;
     }
 
     public float getMonatsLohn(){
