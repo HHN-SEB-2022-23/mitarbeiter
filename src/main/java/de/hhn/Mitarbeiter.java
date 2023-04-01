@@ -19,7 +19,7 @@ public abstract class Mitarbeiter {
         return this.jahresGehaltBisHeute;
     }
 
-    public abstract float entgeldBerechnen();
+    public abstract float entgeltBerechnen();
 
     @Override
     public String toString() {

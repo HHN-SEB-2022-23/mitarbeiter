@@ -14,9 +14,9 @@ public class Zeitarbeiter extends Mitarbeiter {
     }
 
     @Override
-    public float entgeldBerechnen() {
-            float entgeld = gearbeiteteStunden * stundenLohn;
-            return entgeld;
+    public float entgeltBerechnen() {
+            float entgelt = gearbeiteteStunden * stundenLohn;
+            return entgelt;
     }
 
     public float getStundenLohn(){
