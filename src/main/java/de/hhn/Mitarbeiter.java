@@ -8,7 +8,10 @@ public abstract class Mitarbeiter {
     private String nachname = "";
     private float jahresGehaltBisHeute = 0f;
 
-    public Mitarbeiter() { }
+    public Mitarbeiter(String vorname, String nachname) {
+        this.vorname = vorname;
+        this.nachname = nachname;
+    }
 
     public String getVorname() {
         return vorname;
