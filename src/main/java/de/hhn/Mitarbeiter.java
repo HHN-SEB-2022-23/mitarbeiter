@@ -1,5 +1,8 @@
 package de.hhn;
 
+/**
+ * @author Frank Mayer
+ */
 public abstract class Mitarbeiter {
     private String vorname = "";
     private String nachname = "";

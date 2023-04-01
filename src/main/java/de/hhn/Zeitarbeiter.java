@@ -3,7 +3,6 @@ package de.hhn;
 /**
  * @author Felix Marzioch
  */
-
 public class Zeitarbeiter extends Mitarbeiter {
 
     private float stundenLohn;
