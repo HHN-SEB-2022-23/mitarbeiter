@@ -13,6 +13,7 @@ public class Angestellter implements IMitarbeiter {
     private float überStundenTarif;
     private int gearbeiteteÜberstunden;
     private float jahresGehaltBisHeute = 0f;
+    private vertragsArtT vertrag = vertragsArtT.ANGESTELLTER;
 
     public Angestellter(String vorname, String nachname, float monatsLohn, float überStundenTarif, int gearbeiteteÜberstunden){
         this.vorname = vorname;
@@ -46,6 +47,19 @@ public class Angestellter implements IMitarbeiter {
         float entgelt = monatsLohn + (gearbeiteteÜberstunden * überStundenTarif);
         jahresGehaltBisHeute += entgelt;
         return entgelt;
+    }
+
+    public String getVorname() {
+        return vorname;
+    }
+
+    public String getNachname() {
+        return nachname;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s, %s", vorname, nachname, vertrag);
     }
 
     @Override
