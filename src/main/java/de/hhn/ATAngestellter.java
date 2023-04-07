@@ -11,12 +11,13 @@ public class ATAngestellter implements IMitarbeiter, ISteuerZahler {
     private float jahresGehaltBisHeute = 0f;
     private String vorname;
     private String nachname;
-    vertragsArtT vertrag = vertragsArtT.ZEITARBEITER;
+    private vertragsArtT vertrag;
 
     public ATAngestellter(String vorname, String nachname, float monatsLohn) {
         this.vorname = vorname;
         this.nachname = nachname;
         this.monatsLohn = monatsLohn;
+        vertrag = vertragsArtT.ATANGESTELLTER;
 
         if (monatsLohn / 160 < 12) {
             System.err.println("Mindestlohn nicht erreicht.");
@@ -38,7 +39,6 @@ public class ATAngestellter implements IMitarbeiter, ISteuerZahler {
     }
 
     @Override
-
     public float entgeltBerechnen() {
         jahresGehaltBisHeute += monatsLohn;
         return monatsLohn;
@@ -53,5 +53,10 @@ public class ATAngestellter implements IMitarbeiter, ISteuerZahler {
     public float voraussichtlicheEinkommenSteuer() {
         System.err.println("");
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s, %s", vorname, nachname, vertrag);
     }
 }
