@@ -69,6 +69,6 @@ public class Angestellter implements IMitarbeiter {
 
     @Override
     private float voraussichtlicheEinkommenSteuer(){
-
+        return 0;
     }
 }
