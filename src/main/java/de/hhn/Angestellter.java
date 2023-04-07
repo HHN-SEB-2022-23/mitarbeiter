@@ -23,7 +23,7 @@ public class Angestellter implements IMitarbeiter, ISteuerZahler {
         this.gearbeiteteÜberstunden = gearbeiteteÜberstunden;
         vertrag = vertragsArtT.ANGESTELLTER;
 
-        if(monatsLohn <= (160*mindestLohn)){
+        if(monatsLohn < (160*mindestLohn)){
             System.err.println("Mindestlohn wird nicht erreicht.");
         }
     }
