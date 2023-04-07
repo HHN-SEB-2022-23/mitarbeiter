@@ -63,12 +63,12 @@ public class Angestellter implements IMitarbeiter, ISteuerZahler {
     }
 
     @Override
-    private float tatsächlicheEinkommenSteuer(){
+    public float tatsächlicheEinkommenSteuer(){
         return jahresGehaltBisHeute*0.36f;
     }
 
     @Override
-    private float voraussichtlicheEinkommenSteuer(){
+    public float voraussichtlicheEinkommenSteuer(){
         return 0;
     }
 }
