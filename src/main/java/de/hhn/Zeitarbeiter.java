@@ -22,7 +22,7 @@ public class Zeitarbeiter implements IMitarbeiter, ISteuerZahler {
         this.gearbeiteteStunden = gearbeiteteStunden;
         if (stundenLohn < mindestLohn) {
 
-            System.out.println("Dieser Arbeiter wird unterbezahlt :(");
+            System.out.println("Mindestlohn wird nicht erreicht.");
         }
     }
 

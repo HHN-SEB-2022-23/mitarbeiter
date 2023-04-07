@@ -20,7 +20,7 @@ public class ATAngestellter implements IMitarbeiter, ISteuerZahler {
         vertrag = vertragsArtT.ATANGESTELLTER;
 
         if (monatsLohn / 160 < 12) {
-            System.err.println("Mindestlohn nicht erreicht.");
+            System.err.println("Mindestlohn wird nicht erreicht.");
         }
     }
 
