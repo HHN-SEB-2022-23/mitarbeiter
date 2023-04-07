@@ -13,7 +13,7 @@ public class Angestellter implements IMitarbeiter, ISteuerZahler {
     private float überStundenTarif;
     private int gearbeiteteÜberstunden;
     private float jahresGehaltBisHeute = 0f;
-    private vertragsArtT vertrag = vertragsArtT.ANGESTELLTER;
+    private vertragsArtT vertrag;
 
     public Angestellter(String vorname, String nachname, float monatsLohn, float überStundenTarif, int gearbeiteteÜberstunden){
         this.vorname = vorname;
@@ -21,6 +21,7 @@ public class Angestellter implements IMitarbeiter, ISteuerZahler {
         this.monatsLohn = monatsLohn;
         this.überStundenTarif = überStundenTarif;
         this.gearbeiteteÜberstunden = gearbeiteteÜberstunden;
+        vertrag = vertragsArtT.ANGESTELLTER;
 
         if(monatsLohn <= (160*mindestLohn)){
             System.err.println("Mindestlohn wird nicht erreicht.");
