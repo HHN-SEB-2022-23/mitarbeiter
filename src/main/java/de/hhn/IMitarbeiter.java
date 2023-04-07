@@ -4,11 +4,11 @@ package de.hhn;
  * @author Frank Mayer
  */
 public interface IMitarbeiter {
-    String vorname;
-    String nachname;
-    float jahresGehaltBisHeute;
+    String vorname = null;
+    String nachname = null;
+    float jahresGehaltBisHeute = 0f;
     final float mindestLohn = 12.00f;
-    vertragsArtT vertrag;
+    vertragsArtT vertrag = null;
 
     float entgeltBerechnen();
 }
