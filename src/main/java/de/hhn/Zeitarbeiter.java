@@ -7,6 +7,7 @@ import jdk.jshell.spi.ExecutionControl;
  */
 public class Zeitarbeiter implements IMitarbeiter, ISteuerZahler {
 
+    private vertragsArtT vertrag = vertragsArtT.ZEITARBEITER;
     private float stundenLohn;
     private int gearbeiteteStunden;
     private String vorname;
@@ -45,6 +46,27 @@ public class Zeitarbeiter implements IMitarbeiter, ISteuerZahler {
     public void setGearbeiteteStunden(int x) {
         gearbeiteteStunden = x;
 
+    }
+
+    public String getVorname() {
+        return vorname;
+    }
+
+
+    public String getNachname() {
+        return nachname;
+    }
+
+    @Override
+    public String toString() {
+        return "Zeitarbeiter{" +
+            "vertrag=" + vertrag +
+            ", stundenLohn=" + stundenLohn +
+            ", gearbeiteteStunden=" + gearbeiteteStunden +
+            ", vorname='" + vorname + '\'' +
+            ", nachname='" + nachname + '\'' +
+            ", jahresGehaltBisHeute=" + jahresGehaltBisHeute +
+            '}';
     }
 
     @Override
