@@ -12,7 +12,6 @@ public class ATAngestellter extends Mitarbeiter {
     this.monatsLohn = monatsLohn;
     }
 
-
     public float getMonatsLohn(){
         return monatsLohn;
     }
