@@ -5,39 +5,56 @@ import jdk.jshell.spi.ExecutionControl;
 /**
  * @author René Ott
  */
-public class Angestellter extends Mitarbeiter{
+public class Angestellter implements IMitarbeiter {
 
+    private String vorname;
+    private String nachname;
     private float monatsLohn;
-    private float ueberStundenTarif;
-    private int gearbeiteteUeberstunden;
+    private float überStundenTarif;
+    private int gearbeiteteÜberstunden;
+    private float jahresGehaltBisHeute = 0f;
 
-    public Angestellter(String vorname, String nachname, float monatsLohn, float ueberStundenTarif, int gearbeiteteUeberstunden){
-        super(vorname, nachname);
+    public Angestellter(String vorname, String nachname, float monatsLohn, float überStundenTarif, int gearbeiteteÜberstunden){
+        this.vorname = vorname;
+        this.nachname = nachname;
         this.monatsLohn = monatsLohn;
-        this.ueberStundenTarif = ueberStundenTarif;
-        this.gearbeiteteUeberstunden = gearbeiteteUeberstunden;
+        this.überStundenTarif = überStundenTarif;
+        this.gearbeiteteÜberstunden = gearbeiteteÜberstunden;
+
+        if(monatsLohn <= (160*mindestLohn)){
+            System.err.println("Mindestlohn wird nicht erreicht.");
+        }
     }
 
     public float getMonatsLohn(){
         return monatsLohn;
     }
 
-    public float getUeberStundenTarif(){
-        return ueberStundenTarif;
+    public float getÜberStundenTarif(){
+        return überStundenTarif;
     }
 
-    public int getGearbeiteteUeberstunden(){
-        return gearbeiteteUeberstunden;
+    public int getGearbeiteteÜberstunden(){
+        return gearbeiteteÜberstunden;
     }
 
-    public void setGearbeiteteUeberstunden(int x){
-        gearbeiteteUeberstunden = x;
+    public void setGearbeiteteÜberstunden(int x){
+        gearbeiteteÜberstunden = x;
+    }
+
+    public float entgeltBerechnen() {
+        float entgelt = monatsLohn + (gearbeiteteÜberstunden * überStundenTarif);
+        jahresGehaltBisHeute += entgelt;
+        return entgelt;
     }
 
     @Override
-    public float entgeltBerechnen() {
-        float entgelt = monatsLohn + (gearbeiteteUeberstunden * ueberStundenTarif);
-        jahresGehaltBisHeute += entgelt;
-        return entgelt;
+    private float tatsächlicheEinkommenSteuer(){
+        return jahresGehaltBisHeute*0.36f;
+    }
+
+    @Override
+    private float voraussichtlicheEinkommenSteuer(){
+
     }
 }
