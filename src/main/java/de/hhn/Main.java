@@ -7,15 +7,14 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<ISteuerZahler> mitarbeiter = new ArrayList<>(3);
-        mitarbeiter.add(new Angestellter("Rene", "Ott", 20000, 20, 4));
-        mitarbeiter.add(new ATAngestellter("Jan", "Jäger", 20200));
+        mitarbeiter.add(new Angestellter("Rene", "Ott", 50000, 20, 4));
+        mitarbeiter.add(new ATAngestellter("Jan-Niklas", "Jäger", 50200));
         mitarbeiter.add(new Zeitarbeiter("Felix", "Marzioch", 25, 400));
 
         for (var m : mitarbeiter) {
             System.out.printf(
-                "%s <%s> tatsächlicheEinkommenSteuer: %s voraussichtlicheEinkommenSteuer: %s€%n",
+                "%s tatsächlicheEinkommenSteuer: %s voraussichtlicheEinkommenSteuer: %s€%n",
                 m,
-                m.getClass().getSimpleName(),
                 m.tatsächlicheEinkommenSteuer(),
                 m.voraussichtlicheEinkommenSteuer()
             );

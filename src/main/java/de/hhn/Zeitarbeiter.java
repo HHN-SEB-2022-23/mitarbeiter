@@ -60,11 +60,7 @@ public class Zeitarbeiter implements IMitarbeiter, ISteuerZahler {
 
     @Override
     public String toString() {
-        return "Zeitarbeiter{" +
-            "vertrag=" + vertrag +
-            ", vorname='" + vorname + '\'' +
-            ", nachname='" + nachname + '\'' +
-            '}';
+        return String.format("%s %s, %s", vorname, nachname, vertrag);
     }
 
     @Override
