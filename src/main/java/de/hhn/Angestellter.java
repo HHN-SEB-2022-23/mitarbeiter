@@ -5,7 +5,7 @@ import jdk.jshell.spi.ExecutionControl;
 /**
  * @author René Ott
  */
-public class Angestellter implements IMitarbeiter {
+public class Angestellter implements IMitarbeiter, ISteuerZahler {
 
     private String vorname;
     private String nachname;
