@@ -15,12 +15,12 @@ public class Zeitarbeiter implements IMitarbeiter, ISteuerZahler {
     private float jahresGehaltBisHeute = 0;
 
     public Zeitarbeiter(String vorname, String nachname, float stundenLohn, int gearbeiteteStunden){
-        this.vertrag = vertragsArtT.ZEITARBEITER;;
+        this.vertrag = vertragsArtT.ZEITARBEITER;
         this.vorname = vorname;
         this.nachname = nachname;
         this.stundenLohn = stundenLohn;
         this.gearbeiteteStunden = gearbeiteteStunden;
-        if (stundenLohn != mindestLohn) {
+        if (stundenLohn < mindestLohn) {
 
             System.out.println("Dieser Arbeiter wird unterbezahlt :(");
         }
