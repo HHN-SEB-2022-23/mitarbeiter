@@ -48,6 +48,19 @@ public class Angestellter implements IMitarbeiter {
         return entgelt;
     }
 
+    public String getVorname() {
+        return vorname;
+    }
+
+    public String getNachname() {
+        return nachname;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s", vorname, nachname);
+    }
+    
     @Override
     private float tatsächlicheEinkommenSteuer(){
         return jahresGehaltBisHeute*0.36f;
