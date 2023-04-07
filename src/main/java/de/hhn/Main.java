@@ -1,7 +1,6 @@
 package de.hhn;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -12,8 +11,10 @@ public class Main {
         mitarbeiter.add(new Zeitarbeiter("Felix", "Marzioch", 25, 400));
 
         for (var m : mitarbeiter) {
+            ((IMitarbeiter)m).entgeltBerechnen();
+
             System.out.printf(
-                "%s tatsächlicheEinkommenSteuer: %s voraussichtlicheEinkommenSteuer: %s€%n",
+                "%s, tatsächlicheEinkommenSteuer: %sGeld, voraussichtlicheEinkommenSteuer: %sGeld%n",
                 m,
                 m.tatsächlicheEinkommenSteuer(),
                 m.voraussichtlicheEinkommenSteuer()
