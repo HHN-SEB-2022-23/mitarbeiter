@@ -5,4 +5,6 @@ package de.hhn;
  */
 public interface IMitarbeiter {
     final float mindestLohn = 12.00f;
+
+    float entgeltBerechnen();
 }
