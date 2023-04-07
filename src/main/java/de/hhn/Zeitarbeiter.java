@@ -53,7 +53,7 @@ public class Zeitarbeiter implements IMitarbeiter, ISteuerZahler {
     }
 
     @Override
-    public float voraussichtlichesEinkommen()  {
-        throw new ExecutionControl.NotImplementedException("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    public float voraussichtlicheEinkommenSteuer()  {
+        return 0;
     }
 }
