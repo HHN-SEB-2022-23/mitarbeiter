@@ -5,7 +5,7 @@ import jdk.jshell.spi.ExecutionControl;
 /**
  * @author René Ott
  */
-public class Angestellter implements IMitarbeiter {
+public class Angestellter implements IMitarbeiter, ISteuerZahler {
 
     private String vorname;
     private String nachname;
@@ -63,12 +63,12 @@ public class Angestellter implements IMitarbeiter {
     }
 
     @Override
-    private float tatsächlicheEinkommenSteuer(){
+    public float tatsächlicheEinkommenSteuer(){
         return jahresGehaltBisHeute*0.36f;
     }
 
     @Override
-    private float voraussichtlicheEinkommenSteuer(){
-
+    public float voraussichtlicheEinkommenSteuer(){
+        return 0;
     }
 }
