@@ -5,17 +5,25 @@ import jdk.jshell.spi.ExecutionControl;
 /**
  * @author René Ott
  */
-public class Angestellter extends Mitarbeiter{
+public class Angestellter implements IMitarbeiter {
 
+    private String vorname;
+    private String nachname;
     private float monatsLohn;
     private float ueberStundenTarif;
     private int gearbeiteteUeberstunden;
+    private float jahresGehaltBisHeute = 0f;
 
-    public Angestellter(String vorname, String nachname, float monatsLohn, float ueberStundenTarif, int gearbeiteteUeberstunden){
-        super(vorname, nachname);
+    public Angestellter(String vorname, String nachname, float monatsLohn, float ueberStundenTarif, int gearbeiteteUeberstunden) throws Exception{
+        this.vorname = vorname;
+        this.nachname = nachname;
         this.monatsLohn = monatsLohn;
         this.ueberStundenTarif = ueberStundenTarif;
         this.gearbeiteteUeberstunden = gearbeiteteUeberstunden;
+
+        if(monatsLohn <= (160*mindestLohn)){
+            throw new Exception("Mindestlohn wird nicht erreicht.");
+        }
     }
 
     public float getMonatsLohn(){
@@ -34,10 +42,19 @@ public class Angestellter extends Mitarbeiter{
         gearbeiteteUeberstunden = x;
     }
 
-    @Override
     public float entgeltBerechnen() {
         float entgelt = monatsLohn + (gearbeiteteUeberstunden * ueberStundenTarif);
         jahresGehaltBisHeute += entgelt;
         return entgelt;
+    }
+
+    @Override
+    private float tatsächlicheEinkommenSteuer(){
+        return jahresGehaltBisHeute*0.36f;
+    }
+
+    @Override
+    private float voraussichtlicheEinkommenSteuer(){
+
     }
 }
