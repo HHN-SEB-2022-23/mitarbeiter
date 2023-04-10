@@ -1,7 +1,5 @@
 package de.hhn;
 
-import jdk.jshell.spi.ExecutionControl;
-
 /**
  * @author René Ott
  */
@@ -23,7 +21,7 @@ public class Angestellter implements IMitarbeiter, ISteuerZahler {
         this.gearbeiteteÜberstunden = gearbeiteteÜberstunden;
         vertrag = vertragsArtT.ANGESTELLTER;
 
-        if(monatsLohn < (160*mindestLohn)){
+        if(monatsLohn < (160* mindestLohn )){
             System.err.println("Mindestlohn wird nicht erreicht.");
         }
     }
@@ -70,6 +68,7 @@ public class Angestellter implements IMitarbeiter, ISteuerZahler {
 
     @Override
     public float voraussichtlicheEinkommenSteuer(){
+        System.err.println("voraussichtlicheEinkommenSteuer not implemented");
         return 0;
     }
 }

@@ -1,17 +1,15 @@
 package de.hhn;
 
-import jdk.jshell.spi.ExecutionControl;
-
 /**
  * @author Jan-Niklas Jäger
  */
 public class ATAngestellter implements IMitarbeiter, ISteuerZahler {
 
     private float monatsLohn;
-    private float jahresGehaltBisHeute = 0f;
     private String vorname;
     private String nachname;
     private vertragsArtT vertrag;
+    private float jahresGehaltBisHeute = 0f;
 
     public ATAngestellter(String vorname, String nachname, float monatsLohn) {
         this.vorname = vorname;
@@ -51,7 +49,7 @@ public class ATAngestellter implements IMitarbeiter, ISteuerZahler {
 
     @Override
     public float voraussichtlicheEinkommenSteuer() {
-        System.err.println("");
+        System.err.println("voraussichtlicheEinkommenSteuer not implemented");
         return 0;
     }
 

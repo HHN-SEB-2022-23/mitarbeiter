@@ -1,7 +1,5 @@
 package de.hhn;
 
-import jdk.jshell.spi.ExecutionControl;
-
 /**
  * @author Felix Marzioch
  */
@@ -12,7 +10,7 @@ public class Zeitarbeiter implements IMitarbeiter, ISteuerZahler {
     private int gearbeiteteStunden;
     private String vorname;
     private String nachname;
-    private float jahresGehaltBisHeute = 0;
+    private float jahresGehaltBisHeute = 0f;
 
     public Zeitarbeiter(String vorname, String nachname, float stundenLohn, int gearbeiteteStunden){
         this.vertrag = vertragsArtT.ZEITARBEITER;
@@ -46,7 +44,6 @@ public class Zeitarbeiter implements IMitarbeiter, ISteuerZahler {
 
     public void setGearbeiteteStunden(int x) {
         gearbeiteteStunden = x;
-
     }
 
     public String getVorname() {
@@ -70,6 +67,7 @@ public class Zeitarbeiter implements IMitarbeiter, ISteuerZahler {
 
     @Override
     public float voraussichtlicheEinkommenSteuer()  {
+        System.err.println("voraussichtlicheEinkommenSteuer not implemented");
         return 0;
     }
 }
